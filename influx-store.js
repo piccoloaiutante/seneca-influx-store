@@ -96,7 +96,6 @@ module.exports = function(opts) {
 
     },
 
-    //todo check if dbInst is null
     save: function(args,cb) {
     
     	var ent = args.ent
@@ -129,8 +128,9 @@ module.exports = function(opts) {
         		} else {
         			range = getIdRange(entp.id);
         			
-        			//Fetch previously written record from db
-        			var query = 'select * from ' + seriesName + ' where time > ' + range.lower + 'u and time < ' + range.upper + 'u';
+        			
+        			var query = 'select * from ' + seriesName + 
+        				' where time > ' + range.lower + 'u and time < ' + range.upper + 'u';
 			      	
 			      	dbInst.query(query, function(err, entity){
 			      		
@@ -168,7 +168,7 @@ module.exports = function(opts) {
         			return cb(err);
         		} else {
         			
-        			//after writing query db
+        			
         			var query = 'select * from ' + seriesName + 
         									' where time > ' + range.lower + 'u and time < ' + range.upper + 'u';
 
