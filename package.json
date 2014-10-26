@@ -1,0 +1,28 @@
+{
+  "name": "seneca-influx-store",
+  "version": "0.0.1",
+  "description": "An InfluxDB store for Seneca.js",
+  "main": "influx-store.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha test/*.test.js"
+  },
+  "contributors": [
+    {
+      "name": "Sigismond McLaughlin",
+      "email": "sigismondmc@gmail.com"
+    }
+  ],
+  "dependencies": {
+    "underscore": "~1.7.0",
+    "influx": "~2.1.0"
+  },
+  "devDependencies": {
+    "async": "~0.9.0",
+    "seneca": "~0.5.20",
+    "mocha": "~1.20.1",
+    "seneca-store-test": "~0.2.2"
+  },
+  "peerDependencies": {
+    "seneca": "*"
+  }
+}
