@@ -24,12 +24,12 @@ describe('influx', function(){
     shared.basictest(si,done)
   })
 
-  it('extra', function(done){
+  /*it('extra', function(done){
     testcount++
     extratest(si,done)
   })
 
   it('close', function(done){
     shared.closetest(si,testcount,done)
-  })
+  })*/
 })
